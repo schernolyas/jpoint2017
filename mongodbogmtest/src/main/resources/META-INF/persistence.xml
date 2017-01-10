@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="mongo-ogm" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+        <class>ru.schernolyas.mongodbogmtest.Person</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.ogm.datastore.database" value="ogm"/>
+            <property name="hibernate.ogm.datastore.host" value="localhost"/>
+            <property name="hibernate.ogm.datastore.provider" value="MONGODB"/>
+            <property name="hibernate.ogm.datastore.create_database" value="true"/>
+            <!-- Just in case your DB needs user/name password
+                 <property name="hibernate.ogm.datastore.username" value="db_user" />
+                 <property name="hibernate.ogm.datastore.password" value="top_secret!" />
+            -->
+        </properties>
+    </persistence-unit>
+</persistence>
