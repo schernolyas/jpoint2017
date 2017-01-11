@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ru.schernolyas.mongodbogmtest;
+package ru.schernolyas.cassandraogmtest;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -13,8 +13,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
-
-import ru.schernolyas.cassandraogmtest.Person;
 
 /**
  *

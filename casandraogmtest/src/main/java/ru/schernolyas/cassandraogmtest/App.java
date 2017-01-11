@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ru.schernolyas.mongodbogmtest;
+package ru.schernolyas.cassandraogmtest;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -19,7 +19,7 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("mongo-ogm");
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("cassandra-ogm");
         EntityManager em = factory.createEntityManager();
 
         Person person = new Person("name1");
