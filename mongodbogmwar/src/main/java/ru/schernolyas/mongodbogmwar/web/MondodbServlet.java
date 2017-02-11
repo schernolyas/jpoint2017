@@ -15,9 +15,7 @@ import javax.servlet.annotation.WebServlet;
  */
 @WebServlet(asyncSupported = true,value = "/*",description = "MondoDB OGM Example",loadOnStartup = 1)
 @VaadinServletConfiguration(productionMode = false,ui = MondoDbUI.class)
-
 public class MondodbServlet extends VaadinServlet {
-
-   
+    
 
 }

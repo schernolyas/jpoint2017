@@ -2,8 +2,9 @@
 <jboss-deployment-structure>
     <deployment>
         <dependencies>
-            <module name="org.hibernate" slot="ogm" services="export" />
-            <module name="org.hibernate.ogm.mongodb" slot="main" services="export" />
+            <module name="org.hibernate.ogm" slot="5.0" services="export" />
+            <module name="org.hibernate.ogm.mongodb" slot="5.0" services="export" />
+            <module name="org.dom4j" />
         </dependencies>
     </deployment>
 </jboss-deployment-structure>

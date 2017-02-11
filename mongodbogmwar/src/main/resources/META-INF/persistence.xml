@@ -3,11 +3,6 @@
     <persistence-unit name="MONGODB_OGM_PU" transaction-type="JTA">
         <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
         <properties>
-            <property name="hibernate.transaction.jta.platform"
-                          value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
-	        
-            <property name="jboss.as.jpa.providerModule" value="org.hibernate:ogm"/>
-	        
             <property name="hibernate.ogm.datastore.provider" value="mongodb"/>
             <property name="hibernate.ogm.datastore.database" value="ogm"/>
             <property name="hibernate.ogm.datastore.host" value="localhost"/>
