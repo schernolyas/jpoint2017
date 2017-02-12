@@ -2,10 +2,10 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
     <persistence-unit name="redis-ogm" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
-        <class>ru.schernolyas.mongodbogmtest.Person</class>
+        <class>ru.schernolyas.redisogmtest.Person</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
-            <property name="hibernate.ogm.datastore.database" value="ogm"/>
+            <property name="hibernate.ogm.datastore.database" value="0"/>
             <property name="hibernate.ogm.datastore.host" value="localhost"/>
             <property name="hibernate.ogm.datastore.provider" value="redis_experimental"/>
             <property name="hibernate.ogm.datastore.create_database" value="true"/>
