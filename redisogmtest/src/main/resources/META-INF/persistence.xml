@@ -9,10 +9,6 @@
             <property name="hibernate.ogm.datastore.host" value="localhost"/>
             <property name="hibernate.ogm.datastore.provider" value="redis_experimental"/>
             <property name="hibernate.ogm.datastore.create_database" value="true"/>
-            <!-- Just in case your DB needs user/name password
-                 <property name="hibernate.ogm.datastore.username" value="db_user" />
-                 <property name="hibernate.ogm.datastore.password" value="top_secret!" />
-            -->
         </properties>
     </persistence-unit>
 </persistence>
