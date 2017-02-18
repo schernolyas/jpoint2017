@@ -1,3 +1,5 @@
 /casandraogmtest/target/
 /mongodbogmwar/target/
 /redisogmtest/target/
+/performance/nbproject/
+/performance/target/
