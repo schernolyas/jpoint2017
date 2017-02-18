@@ -11,6 +11,8 @@ package ru.schernolyas.performance;
  */
 public interface TestProgram {
     
+    long ROWS_COUNT = 10_000;
+    
     void writeToStorage();
     
     void readSequentially();
