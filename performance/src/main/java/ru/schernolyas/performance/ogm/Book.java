@@ -7,6 +7,7 @@ package ru.schernolyas.performance.ogm;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,7 +26,7 @@ public class Book implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private ObjectId id;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Author author;
     
     private String title;

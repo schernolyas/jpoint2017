@@ -8,6 +8,7 @@ package ru.schernolyas.performance.ogm;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,7 +25,7 @@ public class Author implements Serializable {
     @Id
     private Long id;
     
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author",fetch = FetchType.LAZY)
     private List<Book> books;
     
     private String name;
