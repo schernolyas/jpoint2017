@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="orientdb-remote-ogm"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+                <class>ru.schernolyas.orientdbogmtest.Person</class>
+		<properties>
+			<property name="hibernate.ogm.datastore.provider" value="ORIENTDB_REMOTE" />
+                        <property name="hibernate.ogm.datastore.database" value="ogm" />
+                        <property name="hibernate.ogm.datastore.host" value="localhost"/>
+                        <property name="hibernate.ogm.datastore.username" value="admin" />
+                        <property name="hibernate.ogm.datastore.password" value="admin" />
+		</properties>
+	</persistence-unit>
+</persistence>
