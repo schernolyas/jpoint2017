@@ -8,12 +8,14 @@ package ru.schernolyas.mongodbogmtest;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import org.jboss.logging.Logger;
 
 /**
  *
  * @author Sergey Chernolyas
  */
 public class App {
+    private final static Logger log = Logger.getLogger(App.class);
 
     /**
      * @param args the command line arguments
@@ -22,10 +24,12 @@ public class App {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("mongo-ogm");
         EntityManager em = factory.createEntityManager();
 
-        Person person = new Person("name1");
+        Person person = new Person("itsubbotnik2017");
         em.getTransaction().begin();
         em.persist(person);
         em.getTransaction().commit();
+        
+       log.infof("person id: %s", person.getId());
     }
 
 }

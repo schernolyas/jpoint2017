@@ -25,13 +25,12 @@ public class App {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("cassandra-ogm");
         EntityManager em = factory.createEntityManager();
 
-        Person person = new Person("name1");
+        Person person = new Person("itsubbotnik2017");
         em.getTransaction().begin();
         em.persist(person);
         log.info("Begin to commit");
         em.getTransaction().commit();
-        log.info("finish");
-        System.exit(0);
+        log.infof("person id: %s", person.getId());
     }
 
 }

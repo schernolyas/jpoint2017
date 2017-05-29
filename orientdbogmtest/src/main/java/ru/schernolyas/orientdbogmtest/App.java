@@ -13,7 +13,7 @@ import org.jboss.logging.Logger;
 
 /**
  *
- * @author osboxes
+ * @author Sergey Chernolyas
  */
 public class App {
     private static final Logger log = Logger.getLogger(App.class);
@@ -26,10 +26,12 @@ public class App {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("orientdb-remote-ogm");
         EntityManager em = factory.createEntityManager();
 
-        Person person = new Person("name1");
+        Person person = new Person("itsubbotnik2017");
         em.getTransaction().begin();
         em.persist(person);
         em.getTransaction().commit();
+        
+        log.infof("person id: %s", person.getId());
     }
     
 }
